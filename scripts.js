@@ -7,11 +7,16 @@ const buttons = document.querySelectorAll('.btn');
 const saveButton = document.querySelector('.save');
 let savedCount = localStorage.getItem('savedCount');
 const loadButton = document.querySelector('.load');
+const notification = document.querySelector('.savedAlert');
 
 //save
 saveButton.addEventListener('click', function() {
     localStorage.setItem('savedCount', count);
-    alert('Count saved!');
+    // notification.textContent = 'Count saved!';
+    notification.classList.add('active');
+    setTimeout(() => {
+        notification.classList.remove('active');
+    }, 1000);
 });
 
 // Check if there's a saved count and update the count variable
