@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Counter</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
-            });
-        };
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js");
+        });
+      }
     </script>
-    <link rel="manifest" href="./manifest.json">
-</head>
-<body>
-   <main>
-    <div class="container">
+    <link rel="manifest" href="./manifest.json" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
         <span id="value">0</span>
         <div class="buttonContainer">
-            <button class="btn decrease">-</button>
-            <button class="btn increase">+</button>
+          <button class="btn decrease">-</button>
+          <button class="btn increase">+</button>
         </div>
+        <div class="notification"></div>
         <div class="saveCount">
-            <button class="btn save">Save</button>
-            <button class="btn load">Load</button>
+          <button class="btn save">Save</button>
+          <button class="btn load">Load</button>
         </div>
         <div class="modifyCount">
-            <button class="btn minusFifty">-50</button>
-            <button class="btn minusTen">-10</button>
-            <button class="btn reset">0</button>
-            <button class="btn plusTen">+10</button>
-            <button class="btn plusFifty">+50</button>
+          <button class="btn minusFifty">-50</button>
+          <button class="btn minusTen">-10</button>
+          <button class="btn reset">0</button>
+          <button class="btn plusTen">+10</button>
+          <button class="btn plusFifty">+50</button>
         </div>
-    </div>
-    <div class="savedAlert"></div>
-   </main>
-    
+      </div>
+    </main>
+
     <script src="scripts.js"></script>
-</body>
+  </body>
 </html>
